@@ -167,7 +167,7 @@ const defaultAbout: AboutInfo = {
     'Our guiding motto is "Deeds Not Words". We believe that consistent effort, strong values, and respect for learning shape the future of every learner.',
     'We continue striving to build a supportive environment where learners can develop academically, socially, and culturally.',
   ],
-  principalName: 'Mr S S Magadla',
+  principalName: 'Mr S S Mafunda',
   principalTitle: 'School Principal',
   principalMessage: [
     'Welcome to Magadla Senior Secondary School. We are committed to creating a safe and focused learning environment that helps every learner do their best.',
@@ -210,7 +210,7 @@ export const setResultsByYear = (year: string, data: YearResults) => setObject(`
 // Auth
 export const isAuthenticated = () => localStorage.getItem('admin_auth') === 'true';
 export const login = (password: string): boolean => {
-  if (password === 'admin2025') {
+  if (password === 'magadla2026') {
     localStorage.setItem('admin_auth', 'true');
     return true;
   }

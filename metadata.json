@@ -1,6 +1,6 @@
 {
-  "name": "[SCHOOL NAME]",
-  "description": "[SCHOOL_DESCRIPTION]",
+  "name": "Magadla Senior Secondary School",
+  "description": "A public secondary school in Matatiele, Eastern Cape — Deeds Not Words.",
   "requestFramePermissions": [
     "geolocation"
   ]

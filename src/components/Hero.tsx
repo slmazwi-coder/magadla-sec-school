@@ -4,20 +4,20 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const slides = [
 	{
-		url: "https://images.unsplash.com/photo-1523050853051-be991f85a6ad?q=80&w=2000&auto=format&fit=crop",
+		url: "/images/Hero%201.jpg",
 		caption: "Deeds Not Words"
 	},
 	{
-		url: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2000&auto=format&fit=crop",
+		url: "/images/Hero%202.jpg",
 		caption: "Strive for Excellence"
 	},
 	{
-		url: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2000&auto=format&fit=crop",
-		caption: "Empowering Learners"
+		url: "/images/Hero%203.jpg",
+		caption: "Learning & Growth"
 	},
 	{
-		url: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=2000&auto=format&fit=crop",
-		caption: "Building Brighter Futures"
+		url: "/images/Hero%205.jpg",
+		caption: "School Spirit"
 	},
 ];
 
@@ -42,17 +42,18 @@ export const Hero = () => {
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
 					exit={{ opacity: 0 }}
-					transition={{ duration: 0.6 }}
+					transition={{ duration: 0.8 }}
 					className="absolute inset-0"
 				>
 					<img
 						src={slides[currentIndex].url}
 						alt={slides[currentIndex].caption}
-						className="h-full w-full object-cover object-center opacity-50"
+						className="h-full w-full object-cover object-center opacity-45"
 					/>
+					<div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60" />
 					<div className="absolute bottom-20 left-0 right-0 text-center z-20">
 						<motion.p
-							initial={{ y: 10, opacity: 0 }}
+							initial={{ y: 12, opacity: 0 }}
 							animate={{ y: 0, opacity: 1 }}
 							key={`caption-${currentIndex}`}
 							className="text-white/80 text-lg md:text-xl font-medium tracking-wide uppercase"
@@ -65,24 +66,25 @@ export const Hero = () => {
 
 			<div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
 				<motion.h1
-					initial={{ y: 15, opacity: 0 }}
+					initial={{ y: 14, opacity: 0 }}
 					animate={{ y: 0, opacity: 1 }}
+					transition={{ duration: 0.8 }}
 					className="text-4xl md:text-6xl font-bold mb-4 uppercase"
 				>
 					Magadla Senior Secondary School
 				</motion.h1>
 				<motion.p
-					initial={{ y: 15, opacity: 0 }}
+					initial={{ y: 14, opacity: 0 }}
 					animate={{ y: 0, opacity: 1 }}
-					transition={{ delay: 0.1 }}
+					transition={{ duration: 0.8, delay: 0.05 }}
 					className="text-xl md:text-2xl font-light italic"
 				>
 					"Deeds Not Words"
 				</motion.p>
 				<motion.div
-					initial={{ y: 15, opacity: 0 }}
+					initial={{ y: 14, opacity: 0 }}
 					animate={{ y: 0, opacity: 1 }}
-					transition={{ delay: 0.2 }}
+					transition={{ duration: 0.8, delay: 0.1 }}
 					className="mt-8 flex gap-4"
 				>
 					<a className="btn-primary bg-white text-school-green hover:bg-gray-100" href="/admissions">
@@ -97,12 +99,14 @@ export const Hero = () => {
 			<button
 				onClick={prev}
 				className="absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/20 text-white hover:bg-black/40 transition-colors"
+				aria-label="Previous slide"
 			>
 				<ChevronLeft size={32} />
 			</button>
 			<button
 				onClick={next}
 				className="absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/20 text-white hover:bg-black/40 transition-colors"
+				aria-label="Next slide"
 			>
 				<ChevronRight size={32} />
 			</button>

@@ -23,12 +23,12 @@ export const Navbar = () => {
 				<div className="flex justify-between h-20">
 					<div className="flex items-center">
 						<Link to="/" className="flex items-center gap-3">
-							<div className="h-12 w-12 rounded-xl bg-school-green/10 flex items-center justify-center border border-school-green/20 shadow-lg font-bold text-school-green text-xl">
-								M
+							<div className="h-12 w-12 rounded-xl bg-white flex items-center justify-center border border-school-green/20 shadow-lg overflow-hidden">
+								<img src="/images/Badge.jpg" alt="School badge" className="h-full w-full object-contain" />
 							</div>
 							<div className="hidden md:block">
 								<span className="text-xl font-bold text-school-green block leading-none">
-									Magadla SSS
+									Magadla Senior Secondary
 								</span>
 								<span className="text-sm font-semibold text-gray-500">MATATIELE</span>
 							</div>

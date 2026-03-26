@@ -45,24 +45,29 @@ export const Footer = () => {
 						<h4 className="text-lg font-bold mb-6 border-b border-white/20 pb-2">Quick Links</h4>
 						<ul className="space-y-3 text-green-100">
 							<li>
-								<a href="/about" className="hover:text-white transition-colors">
+								<Link to="/about" className="hover:text-white transition-colors">
 									About Our School
-								</a>
+								</Link>
 							</li>
 							<li>
-								<a href="/documents" className="hover:text-white transition-colors">
+								<Link to="/documents" className="hover:text-white transition-colors">
 									Student Portal
-								</a>
+								</Link>
 							</li>
 							<li>
-								<a href="/achievements" className="hover:text-white transition-colors">
+								<Link to="/achievements" className="hover:text-white transition-colors">
 									Hall of Fame
-								</a>
+								</Link>
 							</li>
 							<li>
-								<a href="/admissions" className="hover:text-white transition-colors">
+								<Link to="/admissions" className="hover:text-white transition-colors">
 									Apply Online
-								</a>
+								</Link>
+							</li>
+							<li>
+								<Link to="/contact" className="hover:text-white transition-colors">
+									Contact
+								</Link>
 							</li>
 						</ul>
 					</div>

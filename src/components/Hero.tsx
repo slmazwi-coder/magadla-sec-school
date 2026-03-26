@@ -39,24 +39,31 @@ export const Hero = () => {
 			<AnimatePresence mode="wait">
 				<motion.div
 					key={currentIndex}
-					initial={{ opacity: 0 }}
-					animate={{ opacity: 1 }}
-					exit={{ opacity: 0 }}
-					transition={{ duration: 0.8 }}
+					initial= opacity: 0 
+					animate= opacity: 1 
+					exit= opacity: 0 
+					transition= duration: 0.8 
 					className="absolute inset-0"
 				>
-					<img
-						src={slides[currentIndex].url}
-						alt={slides[currentIndex].caption}
-						className="h-full w-full object-cover object-center opacity-45"
-					/>
-					<div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60" />
+					{/*
+						Use a center-contained layout so the school images never crop.
+						We keep a subtle dark overlay for readable text.
+					*/}
+					<div className="absolute inset-0 flex items-center justify-center">
+						<img
+							src={slides[currentIndex].url}
+							alt={slides[currentIndex].caption}
+							className="h-full w-full object-contain object-center opacity-95"
+						/>
+					</div>
+					<div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/25 to-black/55" />
+
 					<div className="absolute bottom-20 left-0 right-0 text-center z-20">
 						<motion.p
-							initial={{ y: 12, opacity: 0 }}
-							animate={{ y: 0, opacity: 1 }}
+							initial= y: 12, opacity: 0 
+							animate= y: 0, opacity: 1 
 							key={`caption-${currentIndex}`}
-							className="text-white/80 text-lg md:text-xl font-medium tracking-wide uppercase"
+							className="text-white/85 text-lg md:text-xl font-medium tracking-wide uppercase"
 						>
 							{slides[currentIndex].caption}
 						</motion.p>
@@ -66,25 +73,25 @@ export const Hero = () => {
 
 			<div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
 				<motion.h1
-					initial={{ y: 14, opacity: 0 }}
-					animate={{ y: 0, opacity: 1 }}
-					transition={{ duration: 0.8 }}
-					className="text-4xl md:text-6xl font-bold mb-4 uppercase"
+					initial= y: 14, opacity: 0 
+					animate= y: 0, opacity: 1 
+					transition= duration: 0.8 
+					className="text-4xl md:text-6xl font-bold mb-4 uppercase drop-shadow"
 				>
 					Magadla Senior Secondary School
 				</motion.h1>
 				<motion.p
-					initial={{ y: 14, opacity: 0 }}
-					animate={{ y: 0, opacity: 1 }}
-					transition={{ duration: 0.8, delay: 0.05 }}
-					className="text-xl md:text-2xl font-light italic"
+					initial= y: 14, opacity: 0 
+					animate= y: 0, opacity: 1 
+					transition= duration: 0.8, delay: 0.05 
+					className="text-xl md:text-2xl font-light italic drop-shadow"
 				>
 					"Deeds Not Words"
 				</motion.p>
 				<motion.div
-					initial={{ y: 14, opacity: 0 }}
-					animate={{ y: 0, opacity: 1 }}
-					transition={{ duration: 0.8, delay: 0.1 }}
+					initial= y: 14, opacity: 0 
+					animate= y: 0, opacity: 1 
+					transition= duration: 0.8, delay: 0.1 
 					className="mt-8 flex gap-4"
 				>
 					<a className="btn-primary bg-white text-school-green hover:bg-gray-100" href="/admissions">

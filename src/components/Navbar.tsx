@@ -9,6 +9,7 @@ const navLinks = [
 	{ name: 'Documents', path: '/documents' },
 	{ name: 'Achievements', path: '/achievements' },
 	{ name: 'Extra-Curricular', path: '/extra-curricular' },
+	{ name: 'Sports', path: '/sports' },
 	{ name: 'Admissions', path: '/admissions' },
 	{ name: 'Contact', path: '/contact' },
 ];
@@ -27,9 +28,7 @@ export const Navbar = () => {
 								<img src="/images/Badge.jpg" alt="School badge" className="h-full w-full object-contain" />
 							</div>
 							<div className="hidden md:block">
-								<span className="text-xl font-bold text-school-green block leading-none">
-									Magadla Senior Secondary
-								</span>
+								<span className="text-xl font-bold text-school-green block leading-none">Magadla Senior Secondary</span>
 								<span className="text-sm font-semibold text-gray-500">MATATIELE</span>
 							</div>
 						</Link>

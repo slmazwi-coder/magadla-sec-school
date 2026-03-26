@@ -53,7 +53,7 @@ export interface Activity {
   id: string;
   name: string;
   description: string;
-  category: string;
+  category: 'Sport' | 'Academic' | 'Culture';
   image: string;
 }
 
@@ -182,8 +182,10 @@ const defaultActivities: Activity[] = [
   { id: '1', name: 'Soccer', category: 'Sport', description: 'Teamwork, fitness, and discipline through sport.', image: '' },
   { id: '2', name: 'Netball', category: 'Sport', description: 'Building confidence and competitive spirit.', image: '' },
   { id: '3', name: 'Athletics', category: 'Sport', description: 'Track and field development across all events.', image: '' },
-  { id: '4', name: 'Debating', category: 'Academic', description: 'Developing confident speakers and critical thinkers.', image: '' },
-  { id: '5', name: 'Choral Music', category: 'Culture', description: 'Celebrating culture and excellence through music.', image: '' }
+  { id: '4', name: 'Spelling Bee', category: 'Academic', description: 'Sharpening language skills and vocabulary through competition.', image: '' },
+  { id: '5', name: 'Maths Olympiad', category: 'Academic', description: 'Building strong problem-solving skills and mathematical confidence.', image: '' },
+  { id: '6', name: 'Debating & Public Speaking', category: 'Academic', description: 'Developing confident speakers and critical thinkers.', image: '' },
+  { id: '7', name: 'Choral Music', category: 'Culture', description: 'Celebrating culture and excellence through music.', image: '' },
 ];
 export const getActivities = () => getItems<Activity>('admin_activities').length ? getItems<Activity>('admin_activities') : defaultActivities;
 export const setActivities = (items: Activity[]) => setItems('admin_activities', items);

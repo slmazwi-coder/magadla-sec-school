@@ -10,6 +10,7 @@ import { About } from './pages/About';
 import { Documents } from './pages/Documents';
 import { Achievements } from './pages/Achievements';
 import { ExtraCurricular } from './pages/ExtraCurricular';
+import { Sports } from './pages/Sports';
 import { Admissions } from './pages/Admissions';
 import { Contact } from './pages/Contact';
 
@@ -34,102 +35,28 @@ const HomePage = () => (
 	</>
 );
 
+const PageShell: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+	<>
+		<Navbar />
+		<main className="flex-grow">{children}</main>
+		<Footer />
+		<Chatbot />
+	</>
+);
+
 export default function App() {
 	return (
 		<Router>
 			<Routes>
 				{/* Public routes */}
-				<Route
-					path="/"
-					element={
-						<>
-							<Navbar />
-							<main className="flex-grow">
-								<HomePage />
-							</main>
-							<Footer />
-							<Chatbot />
-						</>
-					}
-				/>
-				<Route
-					path="/about"
-					element={
-						<>
-							<Navbar />
-							<main className="flex-grow">
-								<About />
-							</main>
-							<Footer />
-							<Chatbot />
-						</>
-					}
-				/>
-				<Route
-					path="/documents"
-					element={
-						<>
-							<Navbar />
-							<main className="flex-grow">
-								<Documents />
-							</main>
-							<Footer />
-							<Chatbot />
-						</>
-					}
-				/>
-				<Route
-					path="/achievements"
-					element={
-						<>
-							<Navbar />
-							<main className="flex-grow">
-								<Achievements />
-							</main>
-							<Footer />
-							<Chatbot />
-						</>
-					}
-				/>
-				<Route
-					path="/extra-curricular"
-					element={
-						<>
-							<Navbar />
-							<main className="flex-grow">
-								<ExtraCurricular />
-							</main>
-							<Footer />
-							<Chatbot />
-						</>
-					}
-				/>
-				<Route
-					path="/admissions"
-					element={
-						<>
-							<Navbar />
-							<main className="flex-grow">
-								<Admissions />
-							</main>
-							<Footer />
-							<Chatbot />
-						</>
-					}
-				/>
-				<Route
-					path="/contact"
-					element={
-						<>
-							<Navbar />
-							<main className="flex-grow">
-								<Contact />
-							</main>
-							<Footer />
-							<Chatbot />
-						</>
-					}
-				/>
+				<Route path="/" element={<PageShell><HomePage /></PageShell>} />
+				<Route path="/about" element={<PageShell><About /></PageShell>} />
+				<Route path="/documents" element={<PageShell><Documents /></PageShell>} />
+				<Route path="/achievements" element={<PageShell><Achievements /></PageShell>} />
+				<Route path="/extra-curricular" element={<PageShell><ExtraCurricular /></PageShell>} />
+				<Route path="/sports" element={<PageShell><Sports /></PageShell>} />
+				<Route path="/admissions" element={<PageShell><Admissions /></PageShell>} />
+				<Route path="/contact" element={<PageShell><Contact /></PageShell>} />
 
 				{/* Admin routes */}
 				<Route path="/admin/login" element={<AdminLogin />} />

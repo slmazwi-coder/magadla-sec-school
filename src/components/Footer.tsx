@@ -50,13 +50,13 @@ export const Footer = () => {
 								</Link>
 							</li>
 							<li>
-								<Link to="/documents" className="hover:text-white transition-colors">
-									Student Portal
+								<Link to="/extra-curricular" className="hover:text-white transition-colors">
+									Extra-Curricular
 								</Link>
 							</li>
 							<li>
-								<Link to="/achievements" className="hover:text-white transition-colors">
-									Hall of Fame
+								<Link to="/sports" className="hover:text-white transition-colors">
+									Sports
 								</Link>
 							</li>
 							<li>
@@ -93,10 +93,7 @@ export const Footer = () => {
 						© {new Date().getFullYear()} Magadla Senior Secondary School. All Rights Reserved. | Deeds Not Words | Strive for
 						 Excellence
 					</p>
-					<Link
-						to="/admin/login"
-						className="text-green-200/30 hover:text-green-200/60 text-xs mt-2 inline-block transition-colors"
-					>
+					<Link to="/admin/login" className="text-green-200/30 hover:text-green-200/60 text-xs mt-2 inline-block transition-colors">
 						Staff Portal
 					</Link>
 				</div>

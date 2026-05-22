@@ -20,17 +20,24 @@ export interface DocumentItem {
 
 export interface Application {
   id: string;
-  firstName: string;
-  lastName: string;
-  grade: string;
-  dob: string;
-  guardianName: string;
-  guardianPhone: string;
-  guardianEmail: string;
-  address: string;
-  previousSchool: string;
-  status: 'Pending' | 'Reviewed' | 'Accepted' | 'Rejected';
-  submittedDate: string;
+  studentNumber: string;
+  submittedAt: string;
+  learner: Record<string, string>;
+  prevSchool: Record<string, string>;
+  medical: Record<string, string>;
+  siblings: Record<string, string>;
+  parent1: Record<string, string>;
+  parent2: Record<string, string>;
+  correspondence: Record<string, string>;
+  otherContact: Record<string, string>;
+  uploads: UploadedFile[];
+  status: 'pending' | 'reviewed' | 'accepted' | 'rejected';
+}
+
+export interface UploadedFile {
+  key: string;
+  name: string;
+  dataUrl: string;
 }
 
 export interface ContactInfo {
@@ -113,6 +120,12 @@ export function generateId(): string {
   return Date.now().toString(36) + Math.random().toString(36).substr(2, 9);
 }
 
+export function generateStudentNumber(): string {
+  const year = new Date().getFullYear();
+  const seq = Math.floor(Math.random() * 90000) + 10000;
+  return `MSS${year}${seq}`;
+}
+
 // News
 const defaultNews: NewsItem[] = [
   {
@@ -167,7 +180,7 @@ const defaultAbout: AboutInfo = {
     'Our guiding motto is "Deeds Not Words". We believe that consistent effort, strong values, and respect for learning shape the future of every learner.',
     'We continue striving to build a supportive environment where learners can develop academically, socially, and culturally.',
   ],
-  principalName: 'Mr S S Mafunda',
+  principalName: 'Mr Banda',
   principalTitle: 'School Principal',
   principalMessage: [
     'Welcome to Magadla Senior Secondary School. We are committed to creating a safe and focused learning environment that helps every learner do their best.',
